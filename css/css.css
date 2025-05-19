@@ -73,40 +73,36 @@ h6 {
 }
 
 .join-title {
-  font-family: var(--second-family);
+  font-family: "Cabin", sans-serif;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 52px;
   line-height: 1.2;
   letter-spacing: 0.01em;
   text-align: center;
-  color: var(--color-scheme-1-text);
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .join-text {
-  font-family: var(--second-family);
+  font-family: "Cabin", sans-serif;
+  font-size: 22px;
   line-height: 1.4;
   letter-spacing: 0.01em;
   text-align: center;
-  color: var(--color-scheme-2-text);
   margin-bottom: 8px;
 }
 
 .join-price {
-  font-family: var(--second-family);
-  font-size: 44px;
-  line-height: 1.2;
+  font-family: "Cabin", sans-serif;
+  font-size: 36px;
+  line-height: 1.4;
   letter-spacing: 0.01em;
   text-align: center;
-  color: var(--color-scheme-2-text);
   margin-bottom: 32px;
 }
 
 .join-form-label {
-  font-family: var(--font-family);
   font-size: 16px;
-  color: var(--color-scheme-1-text);
-  display: block;
+  line-height: 1.6;
   margin-bottom: 8px;
 }
 
@@ -115,13 +111,16 @@ h6 {
 }
 
 .input-cont {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(13, 11, 10, 0.6);
   width: 100%;
   max-width: 282px;
   border: 1px solid var(--opacity-transparent);
   border-radius: 12px;
   padding: 8px 12px;
-  height: 42px;
-  background: #d1dfdf;
+  height: 26px;
+  background-color: rgba(13, 11, 10, 0.05);
 }
 
 .input-cont.name {
@@ -143,4 +142,16 @@ input::placeholder {
 
 .join-form-label-cont {
   flex: 1 1 48%;
+}
+
+.join-btn {
+  border: 1px solid #c2d9fc;
+  border-radius: 100px;
+  padding: 10px 24px;
+  width: 155px;
+  height: 46px;
+  background-color: #c2d9fc;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
