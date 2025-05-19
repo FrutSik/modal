@@ -1,35 +1,12 @@
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-a {
-  text-decoration: none;
-}
-
-img {
-  display: block;
-  max-width: 100%;
-  height: auto;
-}
-
-p,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
-
-.overlay {
+.backdrop-10,
+.backdrop-65,
+.backdrop-80 {
   width: 100%;
   height: 100%;
   position: fixed;
   background-color: rgba(0, 0, 0, 0.25);
   top: 0;
+  right: 0;
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
@@ -45,15 +22,15 @@ h6 {
 
 .modal {
   border-radius: 16px;
-  width: 636px;
-  min-height: 445px;
+  width: 343px;
+  max-height: 544px;
   background-color: #dfebeb;
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  padding: 64px;
+  padding: 64px 16px 112px 16px;
 }
 
 .btn-close {
@@ -75,16 +52,16 @@ h6 {
 .join-title {
   font-family: "Cabin", sans-serif;
   font-weight: 400;
-  font-size: 52px;
+  font-size: 40px;
   line-height: 1.2;
   letter-spacing: 0.01em;
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
 .join-text {
   font-family: "Cabin", sans-serif;
-  font-size: 22px;
+  font-size: 18px;
   line-height: 1.4;
   letter-spacing: 0.01em;
   text-align: center;
@@ -93,8 +70,8 @@ h6 {
 
 .join-price {
   font-family: "Cabin", sans-serif;
-  font-size: 36px;
-  line-height: 1.4;
+  font-size: 44px;
+  line-height: 1.2;
   letter-spacing: 0.01em;
   text-align: center;
   margin-bottom: 32px;
@@ -115,29 +92,12 @@ h6 {
   line-height: 1.6;
   color: rgba(13, 11, 10, 0.6);
   width: 100%;
-  max-width: 282px;
+  max-width: 319px;
   border: 1px solid var(--opacity-transparent);
   border-radius: 12px;
   padding: 8px 12px;
   height: 26px;
   background-color: rgba(13, 11, 10, 0.05);
-}
-
-.input-cont.name {
-  max-width: 616px;
-}
-
-input::placeholder {
-  font-family: var(--font-family);
-  font-size: 16px;
-  color: #0d0b0a, 60%;
-}
-
-.join-input-tablet {
-  display: flex;
-  gap: 24px;
-  justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .join-form-label-cont {
@@ -148,10 +108,80 @@ input::placeholder {
   border: 1px solid #c2d9fc;
   border-radius: 100px;
   padding: 10px 24px;
-  width: 155px;
+  width: 100%;
+  max-width: 343px;
   height: 46px;
   background-color: #c2d9fc;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+}
+
+@media screen and (min-width: 768px) {
+  .modal {
+    width: 520px;
+    min-height: 445px;
+    padding: 64px 92px;
+  }
+
+  .btn-close {
+    display: none;
+  }
+
+  .join-title {
+    font-size: 52px;
+    margin-bottom: 24px;
+  }
+
+  .join-text {
+    font-size: 22px;
+  }
+
+  .join-price {
+    font-size: 36px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+  }
+
+  .input-cont {
+    max-width: 224px;
+  }
+
+  .input-cont.name {
+    max-width: 496px;
+  }
+
+  .join-input-tablet {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .join-btn {
+    width: 155px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .modal {
+    width: 636px;
+    min-height: 445px;
+    padding: 64px;
+  }
+
+  .btn-close {
+    display: flex;
+  }
+
+  .input-cont {
+    max-width: 284px;
+  }
+
+  .input-cont.name {
+    max-width: 616px;
+  }
+
+  .join-input-tablet {
+    gap: 24px;
+  }
 }
